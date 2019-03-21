@@ -4,8 +4,21 @@
  * @return {string}
  */
 
-// 水平扫描，每次拿最长的公共前缀子串和数组后面的下一个成员比较，得到新的最长公共前缀子串。
+/**
+ * 二分法查找
+ */
 var longestCommonPrefix = function(strs) {
+  const strsLen = strs.length;
+  if (!strs || strsLen <= 0) return '';
+
+  // ... to be continued 
+}
+ 
+/**
+ * 水平扫描，每次拿最长的公共前缀子串和数组后面的下一个成员比较，得到新的最长公共前缀子串。
+ * 这个方法的劣势在于：1、需要 m * n 次循环遍历；2、需要额外的 m 空间保存公共前缀子串
+ */
+var longestCommonPrefixByScan = function(strs) {
   const common2Prefix = function(str1, str2) {
     const len1 = str1.length, len2 = str2.length;
     let long, short, shortLen;
@@ -36,5 +49,3 @@ var longestCommonPrefix = function(strs) {
 
   return result;
 };
-
-console.log(longestCommonPrefix(["dog", "racecar", "car"]));
