@@ -40,3 +40,5 @@ var mergeKLists = function(lists) {
 
   return result;
 };
+
+// 上面这段代码效率奇低 To be continued ...
